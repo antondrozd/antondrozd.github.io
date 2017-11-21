@@ -1,7 +1,8 @@
 .page-wrapper {
   @include wrapper;
-  padding: 50px 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: 90px;
   background-color: #fff;
-  // color: #fff;
   box-shadow: #64666b 0px 0px 40px 0px;
 }

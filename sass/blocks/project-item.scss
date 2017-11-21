@@ -1,11 +1,8 @@
 .project-item {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  padding: 0px 15px 15px;
-  background-color: #fff;
-  overflow: hidden;
-  transition: all .3s;
+  position: relative;
+  flex-basis: 300px;
+  max-width: 300px;
+  flex-grow: 3;
   &--nerds {
     .project-item__screen {
       background-image: url("../img/nerds-preview.jpg");
@@ -13,9 +10,10 @@
   }
   &--technomart {
     .project-item__screen {
+      margin-bottom: 65px;
       background-image: url("../img/technomart-preview.jpg");
     }
-    .project-item__logo-link {
+    .project-item__logo {
       &:hover {
         img {
           filter: contrast(1.3);
@@ -25,6 +23,7 @@
   }
   &--gllacy {
     .project-item__screen {
+      margin-bottom: 45px;
       background-image: url("../img/gllacy-preview.jpg");
     }
   }
@@ -40,10 +39,10 @@
   }
   &--bikeshop {
     .project-item__screen {
-      margin-bottom: 9px;
+      margin-bottom: 20px;
       background-image: url("../img/bikeshop-preview.jpg");
     }
-    .project-item__logo-link {
+    .project-item__logo {
       &:hover {
         img {
           filter: opacity(0.7);
@@ -51,20 +50,86 @@
       }
     }
   }
-  &:hover {
-
+  &--fix {
+    > a {
+      &::before {
+        content: "Фиксированная вёрстка";
+        color: #fff;
+        background-color: red;
+      }
+    }
+  }
+  &-- {
+    > a {
+      &::before {
+        content: "Резиновая вёрстка";
+        color: #000;
+        background-color: yellow;
+      }
+    }
+  }
+  &--adaptive {
+    > a {
+      &::before {
+        content: "Адаптивная вёрстка";
+        color: #fff;
+        background-color: green;
+      }
+    }
+  }
+  > a {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 35px;
+    margin-bottom: 90px;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+    overflow: hidden;
+    transition: all .3s;
+    &::before {
+      position: absolute;
+      padding: 5px 10px;
+      font-family: "Play", sans-serif;
+      text-decoration: none;
+      opacity: 0;
+      z-index: 2;
+    }
+    &:hover {
+      box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.75);
+      animation: jump .2s linear forwards;
+      &::before {
+        opacity: 1;
+      }
+      .project-item__descr-wrapper {
+        opacity: 1;
+      }
+    }
+    &:active {
+      .project-item__logo {
+        opacity: 0.5;
+      }
+    }
   }
 }
 
-.project-item__screen {
-  padding-top: 270px;
-  margin-bottom: 30px;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  cursor: url("../img/zoom.cur"), zoom-in;
+@keyframes jump {
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
-.project-item__logo-link {
+
+.project-item__screen {
+  padding-top: 270px;
+  margin-bottom: 35px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.project-item__logo {
   display: block;
   align-self: center;
   width: 60%;
@@ -74,15 +139,24 @@
       filter: contrast(2);
     }
   }
-  &:active {
-    opacity: 0.5;
-  }
 }
 
 
-.project-item__descr {
-  display: none;
-  margin: 0;
-  margin-top: auto;
+.project-item__descr-wrapper {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 270px;
+  font-family: "Play", sans-serif;
   text-align: center;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(#203, 0.75);
+  opacity: 0;
+  transition: all .2s;
+  p {
+    margin: auto;
+  }
 }
