@@ -1,8 +1,8 @@
 {
-  "name": "Workshops",
+  "name": "Projects",
   "version": "0.1.0",
   "private": true,
-  "description": "Workshops",
+  "description": "Projects",
   "devDependencies": {
     "autoprefixer": "6.7.x",
     "browser-sync": "2.18.12",
