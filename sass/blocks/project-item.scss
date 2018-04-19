@@ -6,13 +6,14 @@
   margin-bottom: 90px;
   &--nerds {
     .project-item__screen {
-      background-image: url("../img/nerds-preview.jpg");
+      background-image: url('../img/nerds-preview.jpg');
     }
   }
+
   &--technomart {
     .project-item__screen {
       margin-bottom: 65px;
-      background-image: url("../img/technomart-preview.jpg");
+      background-image: url('../img/technomart-preview.jpg');
     }
     .project-item__logo {
       &:hover {
@@ -22,26 +23,36 @@
       }
     }
   }
+
+  &--resee {
+    .project-item__screen {
+      background-image: url('../img/resee-preview.jpg');
+    }
+  }
+
   &--gllacy {
     .project-item__screen {
       margin-bottom: 45px;
-      background-image: url("../img/gllacy-preview.jpg");
+      background-image: url('../img/gllacy-preview.jpg');
     }
   }
+
   &--sedona {
     .project-item__screen {
-      background-image: url("../img/sedona-preview.jpg");
+      background-image: url('../img/sedona-preview.jpg');
     }
   }
+
   &--industrial {
     .project-item__screen {
-      background-image: url("../img/industrial-preview.jpg");
+      background-image: url('../img/industrial-preview.jpg');
     }
   }
+
   &--bikeshop {
     .project-item__screen {
       margin-bottom: 20px;
-      background-image: url("../img/bikeshop-preview.jpg");
+      background-image: url('../img/bikeshop-preview.jpg');
     }
     .project-item__logo {
       &:hover {
@@ -51,28 +62,46 @@
       }
     }
   }
+
+  &--uneedweb {
+    .project-item__screen {
+      background-image: url('../img/uneedweb-preview.jpg');
+    }
+    .project-item__logo {
+      &:hover {
+        img {
+          transition: 0.3s;
+          filter: none;
+          transform: rotateY(180deg);
+        }
+      }
+    }
+  }
+
   &--fix {
     > a {
       &::before {
-        content: "Фиксированная вёрстка";
+        content: 'Фиксированная вёрстка';
         color: #fff;
         background-color: red;
       }
     }
   }
-  &-- {
+
+  &--fluid {
     > a {
       &::before {
-        content: "Резиновая вёрстка";
+        content: 'Резиновая вёрстка';
         color: #000;
         background-color: yellow;
       }
     }
   }
+
   &--adaptive {
     > a {
       &::before {
-        content: "Адаптивная вёрстка";
+        content: 'Адаптивная вёрстка';
         color: #fff;
         background-color: green;
       }
@@ -85,20 +114,20 @@
     height: 100%;
     padding-bottom: 35px;
     background-color: #fff;
-    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
     overflow: hidden;
-    transition: all .3s;
+    transition: all 0.3s;
     &::before {
       position: absolute;
       padding: 5px 10px;
-      font-family: "Play", sans-serif;
+      font-family: 'Play', sans-serif;
       text-decoration: none;
       opacity: 0;
       z-index: 2;
     }
     &:hover {
-      box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.75);
-      animation: jump .2s linear forwards;
+      box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+      animation: jump 0.2s linear forwards;
       &::before {
         opacity: 1;
       }
@@ -123,7 +152,6 @@
   }
 }
 
-
 .project-item__screen {
   padding-top: 270px;
   margin-bottom: 35px;
@@ -143,7 +171,6 @@
   }
 }
 
-
 .project-item__descr-wrapper {
   display: flex;
   position: absolute;
@@ -153,13 +180,13 @@
   width: 100%;
   height: 270px;
   padding: 10px;
-  font-family: "Play", sans-serif;
+  font-family: 'Play', sans-serif;
   text-align: center;
   color: #fff;
   text-decoration: none;
   background-color: rgba(#203, 0.75);
   opacity: 0;
-  transition: all .2s;
+  transition: all 0.2s;
   p {
     margin: auto;
   }
