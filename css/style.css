@@ -81,6 +81,8 @@ img {
     background-image: url("../img/technomart-preview.jpg"); }
   .project-item--technomart .project-item__logo:hover img {
     filter: contrast(1.3); }
+  .project-item--resee .project-item__screen {
+    background-image: url("../img/resee-preview.jpg"); }
   .project-item--gllacy .project-item__screen {
     margin-bottom: 45px;
     background-image: url("../img/gllacy-preview.jpg"); }
@@ -93,16 +95,22 @@ img {
     background-image: url("../img/bikeshop-preview.jpg"); }
   .project-item--bikeshop .project-item__logo:hover img {
     filter: opacity(0.7); }
+  .project-item--uneedweb .project-item__screen {
+    background-image: url("../img/uneedweb-preview.jpg"); }
+  .project-item--uneedweb .project-item__logo:hover img {
+    transition: 0.3s;
+    filter: none;
+    transform: rotateY(180deg); }
   .project-item--fix > a::before {
-    content: "Фиксированная вёрстка";
+    content: 'Фиксированная вёрстка';
     color: #fff;
     background-color: red; }
-  .project-item-- > a::before {
-    content: "Резиновая вёрстка";
+  .project-item--fluid > a::before {
+    content: 'Резиновая вёрстка';
     color: #000;
     background-color: yellow; }
   .project-item--adaptive > a::before {
-    content: "Адаптивная вёрстка";
+    content: 'Адаптивная вёрстка';
     color: #fff;
     background-color: green; }
   .project-item > a {
@@ -116,17 +124,17 @@ img {
     background-color: #fff;
     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
     overflow: hidden;
-    transition: all .3s; }
+    transition: all 0.3s; }
     .project-item > a::before {
       position: absolute;
       padding: 5px 10px;
-      font-family: "Play", sans-serif;
+      font-family: 'Play', sans-serif;
       text-decoration: none;
       opacity: 0;
       z-index: 2; }
     .project-item > a:hover {
       box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
-      animation: jump .2s linear forwards; }
+      animation: jump 0.2s linear forwards; }
       .project-item > a:hover::before {
         opacity: 1; }
       .project-item > a:hover .project-item__descr-wrapper {
@@ -166,12 +174,12 @@ img {
   width: 100%;
   height: 270px;
   padding: 10px;
-  font-family: "Play", sans-serif;
+  font-family: 'Play', sans-serif;
   text-align: center;
   color: #fff;
   text-decoration: none;
   background-color: rgba(34, 0, 51, 0.75);
   opacity: 0;
-  transition: all .2s; }
+  transition: all 0.2s; }
   .project-item__descr-wrapper p {
     margin: auto; }
